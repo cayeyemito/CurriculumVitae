@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 
 function Model() {
   const { scene } = useGLTF("/3d/Monitor001.glb");
-  return <primitive object={scene} scale={1.6} />;
+  return <primitive object={scene} scale={0.5} />;
 }
 
 export default function ThreeHeroGLB() {
@@ -15,7 +15,7 @@ export default function ThreeHeroGLB() {
         <ambientLight intensity={1.2} />
         <directionalLight position={[5, 5, 5]} />
 
-        <group rotation={[0.4, 0.4, 0]}>
+        <group rotation={[0, 0, 0]}>
           <Model />
         </group>
 

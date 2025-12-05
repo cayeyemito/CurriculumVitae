@@ -1,39 +1,66 @@
 "use client";
 
-import ThemeToggle from "./ThemeToggle";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
+  const navRef = useRef(null);
+
   useEffect(() => {
-    gsap.from(".nav-item", {
+    gsap.from(navRef.current, {
       opacity: 0,
       y: -20,
-      duration: 0.6,
+      duration: 1,
       ease: "power3.out",
-      stagger: 0.1,
     });
   }, []);
 
+  const links = [
+    { name: "Inicio", href: "#" },
+    { name: "Proyectos", href: "#proyectos" },
+    { name: "Experiencia", href: "#experiencia" },
+    { name: "Contacto", href: "#contacto" },
+  ];
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-[999] px-10 py-6 
-                    flex justify-between items-center
-                    bg-white/60 dark:bg-black/60 backdrop-blur-md border-b border-black/10 dark:border-white/10">
+    <nav
+      ref={navRef}
+      className="
+        fixed top-0 left-0 w-full z-[999]
+        backdrop-blur-xl
+        bg-white/40 dark:bg-black/40 
+        border-b border-black/10 dark:border-white/10 
+        px-10 py-5 flex justify-between items-center
+      "
+    >
+      {/* LOGO */}
+      <div className="font-bold tracking-widest text-xl dark:text-white">
+        PORTFOLIO<span className="text-neutral-500">.</span>
+      </div>
 
-      <h1 className="nav-item text-2xl font-bold tracking-wider">
-        CV<span className="text-neutral-500">.</span>
-      </h1>
+      {/* LINKS */}
+      <div className="flex items-center gap-8">
+        {links.map((link, i) => (
+          <a
+            key={i}
+            href={link.href}
+            className="
+              relative group text-sm font-medium 
+              dark:text-white text-black tracking-wide
+            "
+          >
+            {link.name}
 
-      <div className="flex items-center gap-6">
-        <a href="#proyectos" className="nav-item text-sm hover:opacity-60 transition">
-          Proyectos
-        </a>
-        <a href="#experiencia" className="nav-item text-sm hover:opacity-60 transition">
-          Experiencia
-        </a>
-        <a href="#contacto" className="nav-item text-sm hover:opacity-60 transition">
-          Contacto
-        </a>
+            {/* Línea hover */}
+            <span
+              className="
+                absolute left-0 -bottom-1 w-0 h-[2px] bg-black dark:bg-white 
+                group-hover:w-full transition-all duration-300
+              "
+            />
+          </a>
+        ))}
 
         <ThemeToggle />
       </div>
