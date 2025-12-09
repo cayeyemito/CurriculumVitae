@@ -128,10 +128,12 @@ export default function Home() {
 
           <div>
             <h3 className="text-5xl font-bold mb-4 group-hover:tracking-wide transition-all">
-              Proyecto Destacado
+              Landing Palestina
             </h3>
             <p className="text-neutral-600 dark:text-neutral-300 text-lg max-w-md">
-              Desarrollo end-to-end con un enfoque en rendimiento, animaciones fluidas y experiencia visual profesional.
+              Landing page informativa y visualmente cuidada, diseñada para presentar un proyecto de forma clara y atractiva. La página combina secciones bien estructuradas, animaciones suaves al hacer scroll y una jerarquía visual pensada para guiar al usuario por el contenido.
+
+El desarrollo se centró en mantener un buen rendimiento, una experiencia fluida en distintos dispositivos y un diseño limpio que refuerza el mensaje principal del proyecto.
             </p>
           </div>
         </a>
@@ -155,7 +157,9 @@ export default function Home() {
               Pokedex
             </h3>
             <p className="text-neutral-600 dark:text-neutral-300 text-lg max-w-md">
-              Interfaz responsive, micro-interacciones y un diseño limpio y profesional.
+              Aplicación web basada en una Pokédex interactiva, donde el usuario puede explorar distintos Pokémon mediante una interfaz visual e intuitiva. El proyecto consume datos en tiempo real desde la PokéAPI y los presenta de forma organizada, con vistas detalladas, diseño responsive y transiciones suaves.
+
+El foco del desarrollo estuvo en la experiencia de usuario, el manejo de datos externos y la creación de una interfaz clara, inspirada en el diseño original de una Pokédex, pero adaptada a la web moderna.
             </p>
           </div>
         </a>
