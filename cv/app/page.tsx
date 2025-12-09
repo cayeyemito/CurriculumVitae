@@ -114,12 +114,12 @@ export default function Home() {
 
         {/* PROYECTO 1 */}
         <a
-          href="#"
+          href="https://palestine-fawn.vercel.app/"
           className="group grid md:grid-cols-2 items-center gap-10"
         >
           <div className="relative overflow-hidden rounded-xl shadow-xl">
             <img
-              src="/mockups/project1.webp"
+              src="images/proyecto-landing.png"
               className="w-full h-[520px] object-cover transition-transform duration-500 group-hover:scale-110"
             />
 

@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiencia = [
   {
-    titulo: "DevOps Engineer (Prácticas)",
+    titulo: "Programador BackEnd Junior",
     empresa: "EY (Ernst & Young)",
     periodo: "oct. 2024 – Actualidad",
     ubicacion: "Barcelona, España",

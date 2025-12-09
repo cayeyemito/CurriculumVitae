@@ -36,7 +36,7 @@ export default function Navbar() {
     >
       {/* LOGO */}
       <div className="font-bold tracking-widest text-xl dark:text-white">
-        PORTFOLIO<span className="text-neutral-500">.</span>
+        CV<span className="text-neutral-500">.</span>
       </div>
 
       {/* LINKS */}
